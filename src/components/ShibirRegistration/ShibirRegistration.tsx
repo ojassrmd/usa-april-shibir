@@ -67,6 +67,33 @@ const scheduleDays: ScheduleDay[] = [
   },
 ];
 
+const accommodationSlabs = [
+  {
+    name: "Slab 1",
+    dateRange: "(up to 28th Feb)",
+    fullPackagePrice: 150,
+    dailyPackagePrice: 60,
+  },
+  {
+    name: "Slab 2",
+    dateRange: "(Mar 1 to Mar 23)",
+    fullPackagePrice: 170,
+    dailyPackagePrice: 70,
+  },
+  {
+    name: "Slab 3",
+    dateRange: "(Mar 24 to Apr 16)",
+    fullPackagePrice: 190,
+    dailyPackagePrice: 80,
+  },
+  {
+    name: "Slab 4",
+    dateRange: "(Walk-in - Apr 17 onwards)",
+    fullPackagePrice: 210,
+    dailyPackagePrice: 90,
+  },
+];
+
 const accommodationOptions: AccommodationOption[] = [
   {
     name: "Exploria Resorts",
@@ -115,7 +142,7 @@ const ShibirRegistration: React.FC = () => {
       <Header />
       <Schedule highlightItems={highlightItems} scheduleDays={scheduleDays} />
       <Registration />
-      <Accommodations options={accommodationOptions} />
+      <Accommodations slabs={accommodationSlabs} options={accommodationOptions} />
       <Sponsorship items={sponsorshipItems} />
       <Footer />
     </div>

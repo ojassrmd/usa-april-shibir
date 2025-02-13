@@ -22,6 +22,13 @@ export interface ScheduleProps {
   scheduleDays: ScheduleDay[];
 }
 
+export interface AccommodationSlab {
+  name: string;
+  dateRange: string;
+  fullPackagePrice: number;
+  dailyPackagePrice: number;
+}
+
 export interface AccommodationOption {
   name: string;
   distance: string;
@@ -31,4 +38,9 @@ export interface AccommodationOption {
 export interface SponsorshipItem {
   name: string;
   amount: number;
+}
+
+export interface AccommodationsProps {
+  slabs: AccommodationSlab[];
+  options: AccommodationOption[];
 }
