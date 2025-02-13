@@ -2,48 +2,63 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <>
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/92f896d5641737073f139a591a5205c494004902c72208eb3b8e51677dc62a55?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3"
-        className="object-contain w-full aspect-[0.62]"
-        alt="Shibir event banner"
-      />
-      <div className="flex gap-4 justify-center items-center pl-6 mt-8 text-2xl font-medium leading-none text-blue-400 whitespace-nowrap">
-        <div className="self-stretch my-auto">Schedule</div>
-        <div className="shrink-0 self-stretch my-auto w-0 h-6 border border-rose-500 border-solid" />
-        <div className="self-stretch my-auto">Registration</div>
-        <div className="shrink-0 self-stretch my-auto w-0 h-6 border border-rose-500 border-solid" />
-        <div className="self-stretch my-auto text-center">Accommodations</div>
+    <div className="flex flex-col items-center bg-[#FFF0F0] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Image */}
+      <div className="w-full relative">
+        <img
+          src="/images/hero-bg.jpg"
+          alt="Spiritual Spring - Shilanyas and Natak Samaysaar Shibir (18-20 Apr) and Yoga Retreat (25-27 Apr)"
+          className="w-full h-[300px] sm:h-[450px] md:h-[550px] lg:h-[634px] object-cover rounded-lg shadow-sm"
+        />
+        <div className="absolute inset-0" />
       </div>
-      <div className="self-center mt-8 text-3xl font-bold leading-10 text-center text-rose-500">
+
+      {/* Navigation */}
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center mt-4 sm:mt-8 text-lg sm:text-xl md:text-2xl font-medium text-[#72B9EA] font-frank">
+        <div>Schedule</div>
+        <div className="hidden sm:block h-6 w-px bg-rose-500" />
+        <div>Registration</div>
+        <div className="hidden sm:block h-6 w-px bg-rose-500" />
+        <div>Accommodations</div>
+      </div>
+
+      {/* Title and Description */}
+      <div className="mt-6 sm:mt-8 text-2xl sm:text-3xl font-bold text-rose-500 text-center font-frank">
         Shibir with
         <br />
         Pujya Gurudevshri
       </div>
-      <div className="self-center mt-4 text-base font-medium leading-6 text-center text-gray-700">
-        Join us for a spiritually elevating weekend in the Divine presence of
-        enlightened visionary and global humanitarian,
+      <div className="mt-3 sm:mt-4 text-sm sm:text-base font-medium text-gray-700 text-center max-w-[90%] sm:max-w-[342px] font-poppins px-4 sm:px-0">
+        Join us for a spiritually elevating weekend in the Divine presence of enlightened visionary and global
+        humanitarian,
       </div>
-      <div className="flex overflow-hidden flex-col items-start self-center py-6 pl-6 mt-8 w-full bg-white shadow-sm max-w-[300px]">
+
+      {/* Profile Card */}
+      <div className="mt-6 sm:mt-8 bg-white shadow-sm p-4 sm:p-6 w-[90%] sm:w-auto sm:max-w-[300px] relative rounded-lg">
         <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/8295abbdfb0a965e9a0ad585b3c6bd44f22f061703f0c7769d35d8cfbd64e2c1?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3"
-          className="object-contain self-stretch w-full aspect-[1.02]"
+          src="/images/gurudev-profile.jpg"
           alt="Pujya Gurudevshri Rakeshji"
+          className="w-full aspect-square object-cover mb-4 rounded-lg"
         />
-        <div className="z-10 mt-0 text-xl font-semibold tracking-normal leading-relaxed text-center text-rose-500">
+        <div className="text-lg sm:text-xl font-semibold text-rose-500 text-center font-frank">
           Pujya Gurudevshri Rakeshji
         </div>
-        <div className="mt-1 text-sm tracking-tight leading-6 text-gray-700">
-          Be part of this momentous occasion – a celebration of devotion,
-          wisdom, and new beginnings.
+        <div className="mt-1 text-xs sm:text-sm text-gray-700 font-poppins">
+          Be part of this momentous occasion – a celebration of devotion, wisdom, and new beginnings.
         </div>
+        {/* Decorative flower */}
+        <img
+          src="/images/flower-decoration.png"
+          alt=""
+          className="absolute -right-6 sm:-right-10 top-32 sm:top-40 w-24 sm:w-36 h-24 sm:h-36"
+        />
       </div>
-      <button className="gap-2.5 self-center px-6 py-3 mt-8 text-xl font-bold leading-tight text-center text-white bg-rose-500 rounded-full">
+
+      {/* Register Button */}
+      <button className="mt-6 sm:mt-8 px-6 py-3 text-lg sm:text-xl font-bold text-white bg-rose-500 hover:bg-rose-600 active:bg-rose-700 transition-colors rounded-full font-frank shadow-sm">
         Register Now
       </button>
-    </>
+    </div>
   );
 };
 
