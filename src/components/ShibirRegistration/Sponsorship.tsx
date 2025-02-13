@@ -7,58 +7,65 @@ interface SponsorshipProps {
 
 const Sponsorship: React.FC<SponsorshipProps> = ({ items }) => {
   return (
-    <div className="flex relative flex-col px-2 pt-16 mt-16 w-full text-center aspect-[0.5]">
+    <div className="flex relative flex-col px-4 pt-16 mt-16 w-full text-center">
+      {/* Background with fade effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-rose-50/50 to-white/90" />
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0930cee73604668c7ef7e31e0edeaaaf3268411421c48da941f22853e553dc29?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3"
-        className="object-cover absolute inset-0 size-full"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0930cee73604668c7ef7e31e0edeaaaf3268411421c48da941f22853e553dc29"
+        className="object-cover absolute inset-0 size-full opacity-30"
         alt="Sponsorship background"
       />
-      <div className="relative self-center text-3xl font-bold leading-none text-rose-500">
-        Sponsorship
-      </div>
-      <div className="flex relative z-10 flex-col mt-8 mb-0 w-full text-base font-semibold leading-7 border border-black border-solid">
-        <div className="flex font-bold text-orange-50 whitespace-nowrap bg-rose-500">
-          <div className="grow px-16 py-2.5 border border-black border-solid w-fit">
-            Sponsorship
-          </div>
-          <div className="px-5 py-2.5 border border-black border-solid">
-            Amount
-          </div>
+      <div className="relative self-center mb-12 text-4xl font-bold text-rose-500">Sponsorship</div>
+
+      {/* Sponsorship Table */}
+      <div className="relative z-10 max-w-[600px] mx-auto w-full bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg">
+        {/* Table Header */}
+        <div className="flex font-bold text-white bg-rose-500/90">
+          <div className="grow py-4 px-6 text-left">Sponsorship</div>
+          <div className="py-4 px-6 text-right w-32">Amount</div>
         </div>
-        {items.map((item, index) => (
-          <div key={index} className="flex">
-            <div className="grow px-9 py-2.5 text-black w-fit">{item.name}</div>
-            <div className="px-6 py-2.5 text-rose-500 whitespace-nowrap border border-black border-solid">
-              ${item.amount}
+
+        {/* Table Body */}
+        <div className="divide-y divide-rose-100/20">
+          {items.map((item, index) => (
+            <div key={index} className="flex hover:bg-white/30 transition-colors duration-200">
+              <div className="grow py-4 px-6 text-left text-gray-800 font-medium">{item.name}</div>
+              <div className="py-4 px-6 text-right font-semibold text-rose-500 w-32">
+                ${item.amount.toLocaleString()}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <div className="flex overflow-hidden flex-col items-start self-center py-6 pl-6 w-full font-semibold leading-6 bg-white shadow-sm max-w-[300px] mt-16">
-        <div className="flex relative flex-col self-stretch pt-64 pb-2 text-xl tracking-normal leading-relaxed text-rose-500 aspect-[0.902]">
+
+      {/* Sponsor a Brick Card */}
+      <div className="relative z-10 mt-16 max-w-[400px] mx-auto bg-white/90 rounded-xl overflow-hidden shadow-lg">
+        <div className="relative pt-[56.25%]">
+          {" "}
+          {/* 16:9 Aspect Ratio */}
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/87d3d8dc5f267623a924dfc341f987008a504eeeb5819ce820103490285c8653?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3"
-            className="object-cover absolute inset-0 size-full"
+            src="/images/us-ashram.png"
+            className="object-cover absolute inset-0 w-full h-full"
             alt="Sponsor a Brick background"
           />
-          Sponsor a Brick
+          <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+            <h3 className="text-2xl font-bold text-white">Sponsor a Brick</h3>
+          </div>
         </div>
-        <div className="text-sm tracking-tighter text-gray-700">
-          This is an incredible opportunity for every family, and every single
-          member, to be a part of history! Be a key member in the monumental
-          'Jin Mandir & Guru Mandir Shilanyas' and contribute to the temple's
-          construction in a truly meaningful way. You can sponsor a Brick for
-          just <span className="font-semibold text-blue-400">$251</span>, and
-          the best part?
-          <br />
-          <br />
-          There's NO limit to how many you can sponsor!
-        </div>
-        <div className="mt-2 text-base tracking-tight text-blue-400">
-          Don't miss out – Sponsor bricks today and be a part of a divine
-          legacy!
+
+        <div className="p-6">
+          <p className="text-gray-700 leading-relaxed mb-4">
+            This is an incredible opportunity for every family, and every single member, to be a part of history! Be a
+            key member in the monumental 'Jin Mandir & Guru Mandir Shilanyas' and contribute to the temple's
+            construction in a truly meaningful way. You can sponsor a Brick for just{" "}
+            <span className="font-semibold text-blue-400">$251</span>, and the best part?
+          </p>
+          <p className="text-lg font-semibold text-gray-700 mb-4">There's NO limit to how many you can sponsor!</p>
+          <p className="text-lg font-semibold text-blue-400">
+            Don't miss out – Sponsor bricks today and be a part of a divine legacy!
+          </p>
         </div>
       </div>
     </div>
