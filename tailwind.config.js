@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
@@ -10,6 +11,10 @@ module.exports = {
                 'blue': {
                     400: '#60a5fa',
                 },
+            },
+            fontFamily: {
+                'frank': ['Frank Ruhl Libre', 'serif'],
+                'poppins': ['Poppins', 'sans-serif'],
             },
         },
     },
