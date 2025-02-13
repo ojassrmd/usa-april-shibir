@@ -5,38 +5,28 @@ import Registration from "./Registration";
 import Accommodations from "./Accommodations";
 import Sponsorship from "./Sponsorship";
 import Footer from "./Footer";
-import {
-  HighlightItem,
-  ScheduleDay,
-  AccommodationOption,
-  SponsorshipItem,
-} from "./types";
+import { HighlightItem, ScheduleDay, AccommodationOption, SponsorshipItem } from "./types";
 
 const highlightItems: HighlightItem[] = [
   {
     title: "Shilanyas",
     description: "Laying the spiritual foundation",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/d8e10776d8e60f8ee6f27d8657847d4d656353673209bd68a529de5225a2b6b3?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3",
+    imageSrc: "/images/shilanyas.png",
   },
   {
     title: "Elevating Discourses",
     description: "Illuminating Discourses on Natak Samaysaar",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/d8e10776d8e60f8ee6f27d8657847d4d656353673209bd68a529de5225a2b6b3?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3",
+    imageSrc: "/images/elevating-discourses.png",
   },
   {
     title: "Drama on Atmarasi Banarasidasji",
-    description:
-      "Transformative drama delving into the life of Atmarasi Banarasidasji, author of Natak Samaysaar",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/d8e10776d8e60f8ee6f27d8657847d4d656353673209bd68a529de5225a2b6b3?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3",
+    description: "Transformative drama delving into the life of Atmarasi Banarasidasji, author of Natak Samaysaar",
+    imageSrc: "/images/drama.png",
   },
   {
     title: "Soulful Bhakti",
     description: "Soul-stirring devotional renditions",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/d8e10776d8e60f8ee6f27d8657847d4d656353673209bd68a529de5225a2b6b3?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3",
+    imageSrc: "/images/soulful-bhakti.png",
   },
 ];
 
