@@ -33,8 +33,8 @@ const highlightItems: HighlightItem[] = [
 const scheduleDays: ScheduleDay[] = [
   {
     date: "Friday, 18th April",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/88d2c198eb0a3e9cee793f3bc27b2dcd67f6dd22d44df0fe0f276d92a5c107a7?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3",
+    imageSrc: "/images/friday.png",
+    flowerSrc: "/images/friday_butterfly.png",
     events: [
       { time: "6.45am to 7.30am", description: "Ajnabhakti" },
       { time: "10am to 12pm", description: "Shilanyas" },
@@ -45,8 +45,8 @@ const scheduleDays: ScheduleDay[] = [
   },
   {
     date: "Saturday, 19th April",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/79c306da8a830d9ea9668243303c8641aec731c2e9b58b3c53b0b4202b1a1e37?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3",
+    imageSrc: "/images/saturday.png",
+    flowerSrc: "/images/saturday_flowers.png",
     events: [
       { time: "6.45am to 7.30am", description: "Ajnabhakti" },
       { time: "10am to 12pm", description: "Natak Samayasaar Satsang 1" },
@@ -57,8 +57,8 @@ const scheduleDays: ScheduleDay[] = [
   },
   {
     date: "Sunday, 20th April",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/abcc70fbcf085346c8788260d99e456f1b98a60b89367addedbfc9fe11bb4a05?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3",
+    imageSrc: "/images/sunday.png",
+    flowerSrc: "/images/sunday_flowers.png",
     events: [
       { time: "6.45am to 7.30am", description: "Ajnabhakti" },
       { time: "10am to 12pm", description: "Natak Samayasaar Satsang 3" },

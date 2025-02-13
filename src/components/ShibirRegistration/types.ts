@@ -4,14 +4,22 @@ export interface HighlightItem {
   imageSrc: string;
 }
 
+export interface ScheduleEvent {
+  time: string;
+  description: string;
+}
+
 export interface ScheduleDay {
   date: string;
   imageSrc: string;
-  events: Array<{
-    time: string;
-    description: string;
-  }>;
+  events: ScheduleEvent[];
   dresscode: string;
+  flowerSrc?: string;
+}
+
+export interface ScheduleProps {
+  highlightItems: HighlightItem[];
+  scheduleDays: ScheduleDay[];
 }
 
 export interface AccommodationOption {

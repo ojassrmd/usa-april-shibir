@@ -1,28 +1,5 @@
 import React from "react";
-
-interface HighlightItem {
-  title: string;
-  description: string;
-  imageSrc: string;
-}
-
-interface ScheduleEvent {
-  time: string;
-  description: string;
-}
-
-interface ScheduleDay {
-  date: string;
-  events: ScheduleEvent[];
-  dresscode: string;
-  imageSrc: string;
-  decorationSrc?: string;
-}
-
-interface ScheduleProps {
-  highlightItems: HighlightItem[];
-  scheduleDays: ScheduleDay[];
-}
+import { ScheduleProps } from "./types";
 
 const Schedule: React.FC<ScheduleProps> = ({ highlightItems, scheduleDays }) => {
   return (
@@ -115,14 +92,24 @@ const Schedule: React.FC<ScheduleProps> = ({ highlightItems, scheduleDays }) => 
         <div className="flex flex-col items-center space-y-8 max-w-xl mx-auto">
           {scheduleDays.map((day, index) => (
             <div key={index} className="w-full bg-white rounded-xl shadow-lg p-6">
-              <div className="relative mb-4">
+              <div className="relative mb-8">
                 <img
                   src={day.imageSrc}
                   alt={`Schedule for ${day.date}`}
                   className="w-full aspect-[16/9] object-cover rounded-xl"
                 />
-                {day.decorationSrc && (
-                  <img src={day.decorationSrc} alt="" className="absolute -right-4 bottom-0 h-24 object-contain" />
+                {day.flowerSrc && (
+                  <div className="absolute bottom-0 left-0 w-1/2">
+                    <img
+                      src={day.flowerSrc}
+                      alt=""
+                      className="w-full h-auto object-contain transform translate-y-1/3"
+                      style={{
+                        filter: "drop-shadow(0 0 10px rgba(0,0,0,0.1))",
+                        transform: "translate(0, 25%) scale(-1, 1)",
+                      }}
+                    />
+                  </div>
                 )}
               </div>
 
