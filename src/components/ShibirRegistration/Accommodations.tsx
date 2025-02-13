@@ -92,36 +92,54 @@ const Accommodations: React.FC<AccommodationsProps> = ({ slabs, options }) => {
         External Hotel Accommodations
       </div>
 
-      {options.map((option, index) => (
-        <div
-          key={index}
-          className="flex overflow-hidden gap-10 justify-between items-center p-4 mt-4 w-full text-center text-rose-500 bg-white shadow-sm max-w-[342px]"
-        >
-          <div className="flex flex-col items-start self-stretch my-auto w-[178px]">
-            <div className="text-xl font-semibold leading-tight">{option.name}</div>
-            <div className="mt-1 text-base leading-loose">{option.distance}</div>
-            {option.note && <div className="mt-1 text-sm leading-7">{option.note}</div>}
+      <div className="flex flex-col items-center gap-4 mt-6">
+        {options.map((option, index) => (
+          <div key={index} className="flex flex-col w-full max-w-[400px] bg-white rounded-xl p-6 shadow-sm">
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-2xl font-semibold text-rose-500">{option.name}</h3>
+                <p className="mt-1 text-lg text-rose-300">{option.distance}</p>
+                {option.note && <p className="mt-2 text-sm text-rose-300">{option.note}</p>}
+              </div>
+              <button className="p-2 bg-rose-500 text-white rounded-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6804faa9f92bf30535cf63dbd2aa98e0d1c7f2c320a85f6378cc8d5d9bba84ea?placeholderIfAbsent=true&apiKey=64f1385746784eecb2fade3c39832bd3"
-            className="object-contain shrink-0 self-stretch my-auto w-8 aspect-square"
-            alt="External link icon"
-          />
-        </div>
-      ))}
+        ))}
+      </div>
 
-      <div className="self-start mt-10 text-xl font-bold leading-snug text-blue-400">Additional Information</div>
-      <div className="flex flex-col mt-6 w-full text-base leading-6 text-black max-w-[342px]">
-        <div>The registration fee includes breakfast, lunch and dinner.</div>
-        <div className="mt-2">
-          Children under 12 years of age are not allowed in the satsang hall during pravachans.
+      <div className="self-center mt-16 text-xl font-semibold leading-tight text-center text-blue-400">
+        Additional Information
+      </div>
+      <div className="flex flex-col gap-4 mt-6 w-full max-w-[400px] mx-auto text-base leading-6 text-gray-700">
+        <div className="flex items-start gap-3">
+          <div className="w-2 h-2 mt-2 bg-rose-500 rounded-sm flex-shrink-0" />
+          <p>The registration fee includes breakfast, lunch and dinner.</p>
         </div>
-        <div className="mt-2">
-          The Management will take utmost care of all participants. However, the management is not responsible for any
-          injury/loss or damage to any individuals or their property during the retreat.
+        <div className="flex items-start gap-3">
+          <div className="w-2 h-2 mt-2 bg-rose-500 rounded-sm flex-shrink-0" />
+          <p>Children under 12 years of age are not allowed in the satsang hall during pravachans.</p>
         </div>
-        <div className="mt-2">Please follow a conservative dress code, no shorts or sleeveless clothing.</div>
+        <div className="flex items-start gap-3">
+          <div className="w-2 h-2 mt-2 bg-rose-500 rounded-sm flex-shrink-0" />
+          <p>
+            The Management will take utmost care of all participants. However, the management is not responsible for any
+            injury/loss or damage to any individuals or their property during the retreat.
+          </p>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="w-2 h-2 mt-2 bg-rose-500 rounded-sm flex-shrink-0" />
+          <p>Please follow a conservative dress code, no shorts or sleeveless clothing.</p>
+        </div>
       </div>
     </div>
   );
