@@ -4,11 +4,15 @@ const Header: React.FC = () => {
   return (
     <div className="flex flex-col items-center bg-[#FFF0F0] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Hero Image */}
-      <div className="w-full relative">
+      <div className="w-full relative aspect-[3/4] sm:aspect-[16/9] md:aspect-[2/1] lg:aspect-[21/9]">
         <img
           src="/images/hero-bg.jpg"
           alt="Spiritual Spring - Shilanyas and Natak Samaysaar Shibir (18-20 Apr) and Yoga Retreat (25-27 Apr)"
-          className="w-full h-[300px] sm:h-[450px] md:h-[550px] lg:h-[634px] object-cover rounded-lg shadow-sm"
+          className="w-full h-full object-cover rounded-lg shadow-sm"
+          loading="eager"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
         />
         <div className="absolute inset-0" />
       </div>
